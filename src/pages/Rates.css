@@ -1,0 +1,258 @@
+/* ==========================================================================
+   EXCHANGE RATES PAGE STYLES
+   Theme: Purple (#6a1b9a) header, light gray rows with smooth hover effect
+   ========================================================================== */
+
+.rates-page-root {
+  position: relative;
+  background-color: #fbf8fd;
+  color: #1e293b;
+  min-height: calc(100vh - 75px);
+  padding: 3.5rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+/* Background floating icons for purple rates theme */
+.rates-page-root .ambient-icon {
+  color: #6a1b9a;
+  opacity: 0.05;
+}
+
+.rates-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.rates-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.rates-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+  border: 1px solid #ce93d8;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.rates-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #4a148c;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.rates-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Controls Bar (Search + Timestamp) */
+.rates-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-bar-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  color: #6a1b9a;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.rates-search-input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.5rem;
+  border: 2px solid #e1bee7;
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: #1e293b;
+  transition: var(--transition);
+}
+
+.rates-search-input:focus {
+  border-color: #6a1b9a;
+  box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.15);
+}
+
+.rates-timestamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Table Card Container */
+.table-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid #e1bee7;
+  box-shadow: 0 15px 35px -5px rgba(106, 27, 154, 0.1), 0 5px 15px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Rates Table */
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Purple Theme Header */
+.rates-table thead tr {
+  background: linear-gradient(135deg, #6a1b9a, #4a148c);
+  color: #ffffff;
+}
+
+.rates-table th {
+  padding: 1.1rem 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Table Rows: Light gray rows with hover effect */
+.rates-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: var(--transition);
+}
+
+.rates-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.rates-table tbody tr:hover {
+  background-color: #f3e5f5;
+  cursor: pointer;
+  transform: scale(1.002);
+}
+
+.rates-table td {
+  padding: 1.1rem 1.25rem;
+  font-size: 0.95rem;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.cell-pair {
+  color: #4a148c;
+  font-size: 1.05rem;
+}
+
+.cell-name {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.cell-num {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Category Badges */
+.cat-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.nri-cat {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.global-cat {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+/* 24h Change Badges */
+.change-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.change-positive {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.change-negative {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.empty-table-cell {
+  text-align: center;
+  padding: 3rem 1.5rem !important;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Footnote */
+.table-footnote {
+  margin-top: 1.25rem;
+  padding: 0 0.5rem;
+}
+
+.table-footnote p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.table-footnote strong {
+  color: #4a148c;
+}

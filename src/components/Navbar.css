@@ -1,0 +1,149 @@
+/* ==========================================================================
+   NAVBAR COMPONENT STYLES
+   ========================================================================== */
+
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0d1b2a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon-wrap {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+}
+
+.brand-icon {
+  font-size: 1.15rem;
+}
+
+.logo-highlight {
+  color: #00b4d8;
+}
+
+/* Navigation Links (Desktop) */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-item {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Dynamic Active Link highlights matching page themes */
+.nav-item.active-home {
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.15);
+  font-weight: 600;
+}
+
+.nav-item.active-converter {
+  color: #4ade80;
+  background-color: rgba(74, 222, 128, 0.15);
+  font-weight: 600;
+}
+
+.nav-item.active-rates {
+  color: #c084fc;
+  background-color: rgba(192, 132, 252, 0.15);
+  font-weight: 600;
+}
+
+.nav-item.active-about {
+  color: #fb923c;
+  background-color: rgba(251, 146, 60, 0.15);
+  font-weight: 600;
+}
+
+.nav-item.active-contact {
+  color: #22d3ee;
+  background-color: rgba(34, 211, 238, 0.15);
+  font-weight: 600;
+}
+
+/* Mobile Hamburger Button */
+.mobile-toggle-btn {
+  display: none;
+  font-size: 1.4rem;
+  color: #ffffff;
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   Responsive Navigation (Media Query)
+   ========================================================================== */
+@media (max-width: 860px) {
+  .mobile-toggle-btn {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0d1b2a;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-links.nav-active {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}

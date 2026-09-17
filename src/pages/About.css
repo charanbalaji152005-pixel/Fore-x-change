@@ -1,0 +1,272 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   Theme: Orange (#e65100) highlights with clean light cards
+   ========================================================================== */
+
+.about-page-root {
+  position: relative;
+  background-color: #fffbf7;
+  color: #1e293b;
+  min-height: calc(100vh - 75px);
+  padding: 3.5rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+/* Ambient floating icons for orange theme */
+.about-page-root .ambient-icon {
+  color: #e65100;
+  opacity: 0.05;
+}
+
+.about-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #bf360c;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.about-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* What is Forex Card */
+.forex-explainer-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid #ffe0b2;
+  padding: 2.5rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 15px 35px -5px rgba(230, 81, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.explainer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e65100;
+  background-color: #fff3e0;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.forex-explainer-card h2 {
+  font-size: 1.65rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.forex-explainer-card p {
+  font-size: 1.02rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.forex-explainer-card strong {
+  color: #e65100;
+}
+
+.forex-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid #ffe0b2;
+  padding-top: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e65100;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 3-Card Feature Section */
+.features-section {
+  margin-bottom: 3.5rem;
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.feature-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ffe0b2;
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(230, 81, 0, 0.05);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff9800;
+  box-shadow: 0 15px 30px rgba(230, 81, 0, 0.12);
+}
+
+.feature-step {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffe0b2;
+}
+
+.feature-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  background: #fff3e0;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e65100;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ffcc80;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Call to Action Card */
+.about-cta-card {
+  background: linear-gradient(135deg, #e65100, #bf360c);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 12px 30px rgba(230, 81, 0, 0.25);
+  flex-wrap: wrap;
+}
+
+.cta-text h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.35rem;
+  color: #ffffff;
+}
+
+.cta-text p {
+  color: #ffe0b2;
+  font-size: 0.95rem;
+}
+
+.about-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  color: #e65100;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-cta-btn:hover {
+  background: #fff3e0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 860px) {
+  .forex-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
